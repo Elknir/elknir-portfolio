@@ -18,11 +18,15 @@
       </SubsectionComponent>
     </div>
 
-    <SrcollingText borderColor="border-y-cyan-300"></SrcollingText>
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Softwares"> </SubsectionComponent>
+    </div>
+
+    <ScrollingText borderColor="border-y-cyan-300"></ScrollingText>
 
     <SectionTitle bgColor="bg-yellow-300"> 02| Web Dev</SectionTitle>
 
-    <SrcollingText borderColor="border-y-yellow-300"></SrcollingText>
+    <ScrollingText borderColor="border-y-yellow-300"></ScrollingText>
   </main>
 </template>
 
@@ -30,12 +34,10 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { SubsectionComponent, SrcollingText, SectionTitle },
+  components: { SubsectionComponent, ScrollingText, SectionTitle },
 })
 
 import SectionTitle from '@/components/SectionTitle.vue'
-import SrcollingText from '@/components/SrcollingText.vue'
+import ScrollingText from '@/components/ScrollingText.vue'
 import SubsectionComponent from '@/components/SubsectionComponent.vue'
 </script>
-
-<style scoped></style>
