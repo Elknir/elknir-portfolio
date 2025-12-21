@@ -19,7 +19,9 @@
     </div>
 
     <div class="w-8/12 mx-auto">
-      <SubsectionComponent subsectionText="Softwares"> </SubsectionComponent>
+      <SubsectionComponent subsectionText="Softwares">
+        <SoftwareList :software-ids="['unreal', 'cpp', 'unity', 'csharp', 'git', 'fmod']" />
+      </SubsectionComponent>
     </div>
 
     <ScrollingText borderColor="border-y-cyan-300"></ScrollingText>
@@ -34,10 +36,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { SubsectionComponent, ScrollingText, SectionTitle },
+  components: { SoftwareList, SubsectionComponent, ScrollingText, SectionTitle },
 })
 
 import SectionTitle from '@/components/SectionTitle.vue'
 import ScrollingText from '@/components/ScrollingText.vue'
 import SubsectionComponent from '@/components/SubsectionComponent.vue'
+import SoftwareList from '@/components/SoftwareList.vue'
 </script>
