@@ -1,5 +1,5 @@
 <template>
-  <div class="perspective-midrange [perspective-origin:right_center] pb-12">
+  <div class="perspective-midrange [perspective-origin:right_center] py-12">
     <div
       class="whitespace-nowrap bg-black py-4 border-4 w-screen"
       :class="borderColor"
