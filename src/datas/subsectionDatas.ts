@@ -59,7 +59,7 @@ export const softwares: SubsectionItems[] = [
     id: 'oculus',
     name: 'VR Unity - Oculus',
     image: '/softwares/Oculus.png',
-    subtitle: '0.5 mois',
+    subtitle: '5 mois',
   },
   {
     id: 'photoshop',
@@ -71,7 +71,7 @@ export const softwares: SubsectionItems[] = [
     id: 'steam',
     name: 'Steam API',
     image: '/softwares/Steam.png',
-    subtitle: '0.3 mois',
+    subtitle: '3 mois',
   },
   {
     id: 'typescript',
@@ -95,7 +95,7 @@ export const softwares: SubsectionItems[] = [
     id: 'affinity',
     name: 'Affinity',
     image: '/softwares/Affinity.png',
-    subtitle: '0.2 mois',
+    subtitle: '2 mois',
   },
 ]
 
