@@ -1,11 +1,6 @@
-export interface Software {
-  id: string
-  name: string
-  image: string
-  years: number
-}
+import type { SoftwareItem } from './interfaces'
 
-export const softwares: Software[] = [
+export const softwares: SoftwareItem[] = [
   {
     id: 'after-effects',
     name: 'After Effects',
@@ -62,7 +57,7 @@ export const softwares: Software[] = [
   },
   {
     id: 'oculus',
-    name: 'Oculus',
+    name: 'VR Unity - Oculus',
     image: '/softwares/Oculus.png',
     years: 0.5,
   },
@@ -74,7 +69,7 @@ export const softwares: Software[] = [
   },
   {
     id: 'steam',
-    name: 'Steam',
+    name: 'Steam API',
     image: '/softwares/Steam.png',
     years: 0.3,
   },

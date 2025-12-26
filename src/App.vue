@@ -20,7 +20,21 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList :software-ids="['unreal', 'cpp', 'unity', 'csharp', 'git', 'fmod']" />
+        <SoftwareList
+          :software-ids="[
+            'unreal',
+            'cpp',
+            'unity',
+            'csharp',
+            'git',
+            'gitlab',
+            'steam',
+            'fmod',
+            'javascript',
+            'typescript',
+            'oculus',
+          ]"
+        />
       </SubsectionComponent>
     </div>
 
@@ -28,7 +42,51 @@
 
     <SectionTitle bgColor="bg-yellow-300"> 02| Web Dev</SectionTitle>
 
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Softwares">
+        <SoftwareList :software-ids="['javascript', 'typescript', 'git', 'gitlab']" />
+      </SubsectionComponent>
+    </div>
+
     <ScrollingText borderColor="border-y-yellow-300"></ScrollingText>
+
+    <SectionTitle bgColor="bg-red-300"> 03| UI/UX Designer</SectionTitle>
+
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Softwares">
+        <SoftwareList :software-ids="['figma', 'photoshop', 'affinity']" />
+      </SubsectionComponent>
+    </div>
+
+    <ScrollingText borderColor="border-y-red-300"></ScrollingText>
+
+    <SectionTitle bgColor="bg-green-300"> 04| Video Editor</SectionTitle>
+
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Softwares">
+        <SoftwareList :software-ids="['davinci', 'after-effects']" />
+      </SubsectionComponent>
+    </div>
+
+    <ScrollingText borderColor="border-y-green-300"></ScrollingText>
+
+    <SectionTitle bgColor="bg-purple-300"> 05| ???</SectionTitle>
+
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Softwares">
+        <SoftwareList :software-ids="['unreal', 'cpp', 'git', 'gitlab']" />
+      </SubsectionComponent>
+    </div>
+
+    <ScrollingText borderColor="border-y-purple-300"></ScrollingText>
+
+    <SectionTitle bgColor="bg-gray-300"> 06| Contacts</SectionTitle>
+
+    <div class="w-8/12 mx-auto">
+      <SubsectionComponent subsectionText="Contacts">
+        <ContactList :contact-ids="['mail']" />
+      </SubsectionComponent>
+    </div>
   </main>
 </template>
 
@@ -36,11 +94,12 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: { SoftwareList, SubsectionComponent, ScrollingText, SectionTitle },
+  components: { ContactList, SoftwareList, SubsectionComponent, ScrollingText, SectionTitle },
 })
 
 import SectionTitle from '@/components/SectionTitle.vue'
 import ScrollingText from '@/components/ScrollingText.vue'
-import SubsectionComponent from '@/components/SubsectionComponent.vue'
-import SoftwareList from '@/components/SoftwareList.vue'
+import SubsectionComponent from '@/components/subsections/SubsectionComponent.vue'
+import SoftwareList from '@/components/subsections/SoftwareList.vue'
+import ContactList from '@/components/subsections/ContactList.vue'
 </script>
