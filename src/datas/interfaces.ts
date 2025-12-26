@@ -1,13 +1,6 @@
-export interface SoftwareItem {
+export interface SubsectionItems {
   id: string
   name: string
   image: string
-  years: number
-}
-
-export interface ContactItem {
-  id: string
-  name: string
-  image: string
-  value: string
+  subtitle: string
 }

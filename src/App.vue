@@ -20,8 +20,9 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList
-          :software-ids="[
+        <SubsectionItemList
+          :items="softwares"
+          :item-ids="[
             'unreal',
             'cpp',
             'unity',
@@ -44,7 +45,10 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList :software-ids="['javascript', 'typescript', 'git', 'gitlab']" />
+        <SubsectionItemList
+          :items="softwares"
+          :item-ids="['javascript', 'typescript', 'git', 'gitlab']"
+        />
       </SubsectionComponent>
     </div>
 
@@ -54,7 +58,7 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList :software-ids="['figma', 'photoshop', 'affinity']" />
+        <SubsectionItemList :items="softwares" :item-ids="['figma', 'photoshop', 'affinity']" />
       </SubsectionComponent>
     </div>
 
@@ -64,7 +68,7 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList :software-ids="['davinci', 'after-effects']" />
+        <SubsectionItemList :items="softwares" :item-ids="['davinci', 'after-effects']" />
       </SubsectionComponent>
     </div>
 
@@ -74,7 +78,7 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
-        <SoftwareList :software-ids="['unreal', 'cpp', 'git', 'gitlab']" />
+        <SubsectionItemList :items="softwares" :item-ids="['unreal', 'cpp', 'git', 'gitlab']" />
       </SubsectionComponent>
     </div>
 
@@ -84,22 +88,16 @@
 
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Contacts">
-        <ContactList :contact-ids="['mail']" />
+        <SubsectionItemList :items="contacts" :item-ids="['mail']" />
       </SubsectionComponent>
     </div>
   </main>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  components: { ContactList, SoftwareList, SubsectionComponent, ScrollingText, SectionTitle },
-})
-
+<script setup lang="ts">
+import { softwares, contacts } from '@/datas/subsectionDatas'
 import SectionTitle from '@/components/SectionTitle.vue'
 import ScrollingText from '@/components/ScrollingText.vue'
 import SubsectionComponent from '@/components/subsections/SubsectionComponent.vue'
-import SoftwareList from '@/components/subsections/SoftwareList.vue'
-import ContactList from '@/components/subsections/ContactList.vue'
+import SubsectionItemList from '@/components/subsections/SubsectionItemList.vue'
 </script>

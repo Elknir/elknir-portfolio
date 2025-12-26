@@ -1,100 +1,109 @@
-import type { SoftwareItem } from './interfaces'
+import type { SubsectionItems } from './interfaces'
 
-export const softwares: SoftwareItem[] = [
+export const softwares: SubsectionItems[] = [
   {
     id: 'after-effects',
     name: 'After Effects',
     image: '/softwares/AE.png',
-    years: 4,
+    subtitle: '4 ans',
   },
   {
     id: 'csharp',
     name: 'C#',
     image: '/softwares/Csharp.png',
-    years: 3,
+    subtitle: '3 ans',
   },
   {
     id: 'cpp',
     name: 'C++',
     image: '/softwares/Cpp.png',
-    years: 1,
+    subtitle: '1 ans',
   },
   {
     id: 'davinci',
     name: 'DaVinci Resolve',
     image: '/softwares/Davinci.png',
-    years: 5,
+    subtitle: '5 ans',
   },
   {
     id: 'figma',
     name: 'Figma',
     image: '/softwares/Figma.png',
-    years: 3,
+    subtitle: '3 ans',
   },
   {
     id: 'fmod',
     name: 'FMOD',
     image: '/softwares/Fmod.png',
-    years: 1,
+    subtitle: '1 ans',
   },
   {
     id: 'git',
     name: 'Git',
     image: '/softwares/Git.png',
-    years: 5,
+    subtitle: '5 ans',
   },
   {
     id: 'gitlab',
     name: 'GitLab',
     image: '/softwares/Gitlab.png',
-    years: 2,
+    subtitle: '2 ans',
   },
   {
     id: 'javascript',
     name: 'JavaScript',
     image: '/softwares/JS.png',
-    years: 2,
+    subtitle: '2 ans',
   },
   {
     id: 'oculus',
     name: 'VR Unity - Oculus',
     image: '/softwares/Oculus.png',
-    years: 0.5,
+    subtitle: '0.5 mois',
   },
   {
     id: 'photoshop',
     name: 'Photoshop',
     image: '/softwares/Photoshop.png',
-    years: 7,
+    subtitle: '7 ans',
   },
   {
     id: 'steam',
     name: 'Steam API',
     image: '/softwares/Steam.png',
-    years: 0.3,
+    subtitle: '0.3 mois',
   },
   {
     id: 'typescript',
     name: 'TypeScript',
     image: '/softwares/TS.png',
-    years: 2,
+    subtitle: '2 ans',
   },
   {
     id: 'unreal',
     name: 'Unreal Engine',
     image: '/softwares/Unreal.png',
-    years: 3,
+    subtitle: '3 ans',
   },
   {
     id: 'unity',
     name: 'Unity',
     image: '/softwares/Unity.png',
-    years: 3,
+    subtitle: '3 ans',
   },
   {
     id: 'affinity',
     name: 'Affinity',
     image: '/softwares/Affinity.png',
-    years: 0.2,
+    subtitle: '0.2 mois',
+  },
+]
+
+export const contacts: SubsectionItems[] = [
+  {
+    id: 'mail',
+    name: 'Email',
+    image: '/contacts/Mail.png',
+    subtitle: 'elknir.pro@gmail.com',
   },
 ]
