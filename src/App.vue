@@ -7,8 +7,9 @@
         hover:text-cyan-300 hover:text-yellow-300 hover:text-red-300 hover:text-green-300 hover:text-purple-300 hover:text-orange-300
         border-y-cyan-300 border-y-yellow-300 border-y-red-300 border-y-green-300 border-y-purple-300 border-y-orange-300-->
 
-    <Navbar />
+    <NavbarItem />
 
+    <!--  Hero  -->
     <section class="relative h-screen w-full overflow-hidden">
       <video
         autoplay
@@ -19,8 +20,33 @@
       >
         <source src="/heroBG.mp4" type="video/mp4" />
       </video>
-      <div class="absolute inset-0 bg-black/30"></div>
-      <div class="relative z-10 flex items-center justify-center h-full w-full"></div>
+      <div class="absolute inset-0 bg-black/33"></div>
+
+      <div
+        class="absolute inset-0 flex flex-col md:flex-row items-center justify-end md:items-end md:justify-evenly z-10"
+      >
+        <h1
+          class="font-dfp text-white font-black text-6xl md:text-[12rem] leading-none tracking-tighter uppercase md:pb-[25vh]"
+        >
+          Elknir
+        </h1>
+
+        <img
+          src="/ELKNIR_upscaled_cropped.png"
+          alt="Avatar"
+          class="h-[65vh] md:h-[85vh] w-auto object-contain"
+          :style="{
+            filter: `
+                drop-shadow(var(--shadow-size) 0 0 var(--outline-color))
+                drop-shadow(calc(var(--shadow-size) * -1) 0 0 var(--outline-color))
+                drop-shadow(0 var(--shadow-size) 0 var(--outline-color))
+                drop-shadow(0 calc(var(--shadow-size) * -1) 0 var(--outline-color))
+              `,
+            '--outline-color': '#5792e0',
+            '--shadow-size': '17px',
+          }"
+        />
+      </div>
     </section>
 
     <!--  Game DZSev  -->
@@ -126,6 +152,6 @@ import SectionTitle from '@/components/SectionTitle.vue'
 import ScrollingText from '@/components/ScrollingText.vue'
 import SubsectionComponent from '@/components/subsections/SubsectionComponent.vue'
 import SubsectionItemList from '@/components/subsections/SubsectionItemList.vue'
-import Navbar from '@/components/Navbar.vue'
+import NavbarItem from '@/components/NavbarComponent.vue'
 import { sectionsConfig } from '@/datas/sectionsDatas.ts'
 </script>

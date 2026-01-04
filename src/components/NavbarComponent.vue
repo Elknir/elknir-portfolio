@@ -5,7 +5,7 @@
     <div class="max-w-[1920px] mx-auto px-4 md:px-16">
       <div class="flex items-center justify-between h-16 md:h-32">
         <div class="shrink-0 font-black tracking-tighter text-xl md:text-4xl uppercase">
-          PORTFOLIO
+          <a href="#" class="hover:opacity-80 transition-opacity cursor-pointer"> PORTFOLIO </a>
         </div>
 
         <div class="hidden md:block">

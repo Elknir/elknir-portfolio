@@ -7,5 +7,5 @@ export const sectionsConfig = {
   contacts: { id: 'contacts', name: 'Contacts', color: 'orange-300' },
 }
 
-// Un tableau simple pour boucler dans la Navbar
+// Un tableau simple pour boucler dans la NavbarItem
 export const navLinks = Object.values(sectionsConfig)
