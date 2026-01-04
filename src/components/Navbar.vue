@@ -12,12 +12,17 @@
           <div class="flex items-baseline space-x-12">
             <a
               v-for="link in navLinks"
-              :key="link.name"
-              :href="link.href"
-              class="group relative hover:text-cyan-400 transition-colors duration-300 text-xl font-bold uppercase tracking-widest"
+              :key="link.id"
+              :href="'#' + link.id"
+              class="group transition-colors duration-300 text-xl font-bold uppercase tracking-widest"
+              :class="'hover:text-' + link.color"
             >
               {{ link.name }}
-              <span class="inline-block transition-transform group-hover:translate-x-2">[→]</span>
+              <span
+                class="inline-block transition-transform duration-300 group-hover:translate-x-2"
+              >
+                [→]
+              </span>
             </a>
           </div>
         </div>
@@ -66,8 +71,8 @@
         <div class="px-4 pt-2 pb-6 space-y-1">
           <a
             v-for="link in navLinks"
-            :key="link.name"
-            :href="link.href"
+            :key="link.id"
+            :href="'#' + link.id"
             @click="isOpen = false"
             class="block py-4 text-base font-medium border-b border-white/10 last:border-none uppercase tracking-wider"
           >
@@ -81,18 +86,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { navigationSections } from '@/datas/sectionsDatas.ts'
+import { navLinks } from '@/datas/sectionsDatas.ts'
 
 const isOpen = ref(false)
-
-const navLinks = [
-  { name: 'Game Dev', href: '#game-dev' },
-  { name: 'Web Dev', href: '#web-dev' },
-  { name: 'UI/UX Designer', href: '#ui-ux' },
-  { name: 'Video Editor', href: '#video-editor' },
-  /*
-    { name: '???', href: '#???' },
-  */
-  { name: 'Contacts', href: '#contacts' },
-]
 </script>

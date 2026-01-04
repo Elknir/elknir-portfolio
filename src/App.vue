@@ -3,11 +3,13 @@
     class="bg-cover bg-center bg-no-repeat bg-fixed overflow-clip"
     style="background-image: url('/bg-site.png')"
   >
+    <!-- bg-cyan-300 bg-yellow-300 bg-red-300 bg-green-300 bg-purple-300 bg-orange-300
+        hover:text-cyan-300 hover:text-yellow-300 hover:text-red-300 hover:text-green-300 hover:text-purple-300 hover:text-orange-300
+        border-y-cyan-300 border-y-yellow-300 border-y-red-300 border-y-green-300 border-y-purple-300 border-y-orange-300-->
+
     <Navbar />
 
-    <!--  Hero Section  -->
     <section class="relative h-screen w-full overflow-hidden">
-      <!-- Video BG -->
       <video
         autoplay
         loop
@@ -17,16 +19,14 @@
       >
         <source src="/heroBG.mp4" type="video/mp4" />
       </video>
-
-      <!-- Dark Tint -->
       <div class="absolute inset-0 bg-black/30"></div>
-
-      <!-- Contenu par-dessus la vidéo -->
       <div class="relative z-10 flex items-center justify-center h-full w-full"></div>
     </section>
 
-    <SectionTitle bgColor="bg-cyan-300" id="game-dev"> 01| Game Dev</SectionTitle>
-
+    <!--  Game DZSev  -->
+    <SectionTitle :id="sectionsConfig.gameDev.id" :bgColor="'bg-' + sectionsConfig.gameDev.color">
+      01| {{ sectionsConfig.gameDev.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Demo Reel">
         <iframe
@@ -38,9 +38,6 @@
           allowfullscreen
         ></iframe>
       </SubsectionComponent>
-    </div>
-
-    <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
         <SubsectionItemList
           :items="softwares"
@@ -60,11 +57,12 @@
         />
       </SubsectionComponent>
     </div>
+    <ScrollingText :borderColor="'border-y-' + sectionsConfig.gameDev.color" />
 
-    <ScrollingText borderColor="border-y-cyan-300"></ScrollingText>
-
-    <SectionTitle bgColor="bg-yellow-300" id="web-dev"> 02| Web Dev</SectionTitle>
-
+    <!--  Web Dev  -->
+    <SectionTitle :id="sectionsConfig.webDev.id" :bgColor="'bg-' + sectionsConfig.webDev.color">
+      02| {{ sectionsConfig.webDev.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
         <SubsectionItemList
@@ -73,41 +71,47 @@
         />
       </SubsectionComponent>
     </div>
+    <ScrollingText :borderColor="'border-y-' + sectionsConfig.webDev.color" />
 
-    <ScrollingText borderColor="border-y-yellow-300"></ScrollingText>
-
-    <SectionTitle bgColor="bg-red-300" id="ui-ux"> 03| UI/UX Designer</SectionTitle>
-
+    <!--  UI UX  -->
+    <SectionTitle :id="sectionsConfig.uiUx.id" :bgColor="'bg-' + sectionsConfig.uiUx.color">
+      03| {{ sectionsConfig.uiUx.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
         <SubsectionItemList :items="softwares" :item-ids="['figma', 'photoshop', 'affinity']" />
       </SubsectionComponent>
     </div>
+    <ScrollingText :borderColor="'border-y-' + sectionsConfig.uiUx.color" />
 
-    <ScrollingText borderColor="border-y-red-300"></ScrollingText>
-
-    <SectionTitle bgColor="bg-green-300" id="video-editor"> 04| Video Editor</SectionTitle>
-
+    <!--  Video Editor  -->
+    <SectionTitle :id="sectionsConfig.video.id" :bgColor="'bg-' + sectionsConfig.video.color">
+      04| {{ sectionsConfig.video.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
         <SubsectionItemList :items="softwares" :item-ids="['davinci', 'after-effects']" />
       </SubsectionComponent>
     </div>
+    <ScrollingText :borderColor="'border-y-' + sectionsConfig.video.color" />
 
-    <ScrollingText borderColor="border-y-green-300"></ScrollingText>
-
-    <SectionTitle bgColor="bg-purple-300"> 05| ???</SectionTitle>
-
+    <!--  Mystery  -->
+    <SectionTitle :id="sectionsConfig.mystery.id" :bgColor="'bg-' + sectionsConfig.mystery.color">
+      05| {{ sectionsConfig.mystery.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Softwares">
         <SubsectionItemList :items="softwares" :item-ids="['unreal', 'cpp', 'git', 'gitlab']" />
       </SubsectionComponent>
     </div>
+    <ScrollingText :borderColor="'border-y-' + sectionsConfig.mystery.color" />
 
-    <ScrollingText borderColor="border-y-purple-300" id="???"></ScrollingText>
+    <!--    bg-orange-300-->
 
-    <SectionTitle bgColor="bg-gray-300" id="contacts"> 06| Contacts</SectionTitle>
-
+    <!-- Contacts  -->
+    <SectionTitle :id="sectionsConfig.contacts.id" :bgColor="'bg-' + sectionsConfig.contacts.color">
+      06| {{ sectionsConfig.contacts.name }}
+    </SectionTitle>
     <div class="w-8/12 mx-auto">
       <SubsectionComponent subsectionText="Contacts">
         <SubsectionItemList :items="contacts" :item-ids="['mail']" />
@@ -122,6 +126,6 @@ import SectionTitle from '@/components/SectionTitle.vue'
 import ScrollingText from '@/components/ScrollingText.vue'
 import SubsectionComponent from '@/components/subsections/SubsectionComponent.vue'
 import SubsectionItemList from '@/components/subsections/SubsectionItemList.vue'
-import Bubble from '@/components/Bubble.vue'
 import Navbar from '@/components/Navbar.vue'
+import { sectionsConfig } from '@/datas/sectionsDatas.ts'
 </script>
