@@ -26,7 +26,7 @@
         class="absolute inset-0 flex flex-col md:flex-row items-center justify-end md:items-end md:justify-evenly z-10"
       >
         <h1
-          class="font-dfp text-white font-black text-6xl md:text-[12rem] leading-none tracking-tighter uppercase md:pb-[25vh]"
+          class="font-dfp text-white font-black text-[5rem] md:text-[12rem] leading-none tracking-tighter uppercase pb-20 md:pb-[25vh]"
         >
           Elknir
         </h1>
@@ -34,7 +34,7 @@
         <img
           src="/ELKNIR_upscaled_cropped.png"
           alt="Avatar"
-          class="h-[65vh] md:h-[85vh] w-auto object-contain"
+          class="md:h-[85vh] w-auto object-contain block"
           :style="{
             filter: `
                 drop-shadow(var(--shadow-size) 0 0 var(--outline-color))
