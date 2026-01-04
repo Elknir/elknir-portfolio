@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block p-4 md:p-8 lg:p-16">
+  <div class="inline-block p-4 md:p-8 lg:p-16 scroll-mt-16 md:scroll-mt-32">
     <div class="bg-white">
       <!-- Upper Content -->
       <div class="bg-black text-white px-3 md:py-1 font-mono text-[11px] md:text-sm">

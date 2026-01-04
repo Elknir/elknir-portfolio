@@ -5,7 +5,7 @@
       class="absolute w-full px-6 py-2 h-16 rounded-tr-xl"
       :style="{
         background: 'linear-gradient(to bottom, #151515 0%, #151515 70%, rgba(26, 26, 26, 0) 100%)',
-        zIndex: 100,
+        zIndex: 10,
         top: 0,
         left: 0,
       }"
