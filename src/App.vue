@@ -7,6 +7,8 @@
         hover:text-cyan-300 hover:text-yellow-300 hover:text-red-300 hover:text-green-300 hover:text-purple-300 hover:text-orange-300
         border-y-cyan-300 border-y-yellow-300 border-y-red-300 border-y-green-300 border-y-purple-300 border-y-orange-300-->
 
+    <!--    animate-slide-right-->
+
     <NavbarItem />
 
     <!--  Hero  -->
@@ -22,34 +24,61 @@
       </video>
       <div class="absolute inset-0 bg-black/33"></div>
 
+      <!-- Code a modifier start -->
       <div
-        class="absolute inset-0 flex flex-col md:flex-row items-center justify-end md:items-end md:justify-evenly z-10"
+        class="absolute inset-0 flex flex-col md:flex-row items-center justify-start md:items-end md:justify-start z-10"
       >
-        <h1
-          class="font-dfp text-white font-black text-[5rem] md:text-[6rem] leading-none tracking-tighter uppercase pb-20 md:pb-[25vh] animate-slide-right"
-        >
-          > USER_ID : ELKNIR
-        </h1>
+        <div class="relative">
+          <!-- Image -->
+          <img src="/ELKNIR.png" alt="Avatar" class="h-[85vh] w-auto object-contain md:ml-12" />
 
-        <img
-          src="/ELKNIR.png"
-          alt="Avatar"
-          class="md:h-[85vh] w-auto object-contain block animate-slide-right"
-          :style="{
-            filter: `
-                drop-shadow(var(--shadow-size) 0 0 var(--outline-color))
-                drop-shadow(calc(var(--shadow-size) * -1) 0 0 var(--outline-color))
-                drop-shadow(0 var(--shadow-size) 0 var(--outline-color))
-                drop-shadow(0 calc(var(--shadow-size) * -1) 0 var(--outline-color))
-              `,
-            '--outline-color': '#5792e0',
-            '--shadow-size': '17px',
-          }"
-        />
+          <!-- Gros texte ELKNIR - en dessous du cadre -->
+          <div
+            class="absolute bottom-[15%] left-[70%] text-black text-[30vh] leading-none whitespace-nowrap font-dfp"
+          >
+            ELKNIR
+          </div>
+
+          <!-- Frame corners around head - positionné relativement à l'image -->
+          <div
+            class="absolute top-[3%] left-[52%] -translate-x-1/2 w-[35vh] h-[35vh] pointer-events-none"
+          >
+            <!-- Top left corner -->
+            <div
+              class="absolute top-0 left-0 w-[20%] h-[20%] border-t-[0.6vh] border-l-[0.6vh] border-black"
+            ></div>
+
+            <!-- Top right corner -->
+            <div
+              class="absolute top-0 right-0 w-[20%] h-[20%] border-t-[0.6vh] border-r-[0.6vh] border-black"
+            ></div>
+
+            <!-- Bottom left corner -->
+            <div
+              class="absolute bottom-0 left-0 w-[20%] h-[20%] border-b-[0.6vh] border-l-[0.6vh] border-black"
+            ></div>
+
+            <!-- Bottom right corner -->
+            <div
+              class="absolute bottom-0 right-0 w-[20%] h-[20%] border-b-[0.6vh] border-r-[0.6vh] border-black"
+            ></div>
+
+            <!-- Text "user id:" -->
+            <!-- "&gt;" for > -->
+            <!-- -mb-[0.8vh] to align perfectly -->
+            <div
+              class="absolute bottom-0 left-full ml-[1vh] text-black text-[3vh] whitespace-nowrap leading-none -mb-[0.8vh]"
+            >
+              &gt; User id :
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Code a modifier end -->
     </section>
 
-    <!--  Game DZSev  -->
+    <!--  Game Dev  -->
     <SectionTitle :id="sectionsConfig.gameDev.id" :bgColor="'bg-' + sectionsConfig.gameDev.color">
       01| {{ sectionsConfig.gameDev.name }}
     </SectionTitle>

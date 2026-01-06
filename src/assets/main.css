@@ -8,22 +8,20 @@
   font-display: swap;
 }
 
-/* Ajout de ta nouvelle police pour les titres */
+
 @font-face {
-  font-family: 'DFP_GBZY9';
-  src: url('/src/assets/fonts/DFP_GBZY9.ttf') format('truetype');
+  font-family: 'DFPT_ZY9';
+  src: url('@/assets/fonts/DFPT_ZY9.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
+
 @theme {
-  /* Fonts */
   --font-vcr: 'VCR OSD Mono', monospace;
   --font-sans: 'VCR OSD Mono', ui-sans-serif, system-ui, sans-serif;
-  --font-dfp: 'DFP_GBZY9', sans-serif;
 
-
+  --font-dfp: 'DFPT_ZY9', sans-serif;
 }
 
 @keyframes slide-right {

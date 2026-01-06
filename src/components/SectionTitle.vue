@@ -12,7 +12,7 @@
         <div
           class="px-4 md:px-6 lg:px-8 md:py-2 lg:py-4 sm:w-32 md:w-64 lg:w-128 flex items-center"
         >
-          <h2 class="text-2xl md:text-4xl lg:text-5xl flex-1">
+          <h2 class="text-2xl md:text-4xl lg:text-5xl flex-1 whitespace-nowrap">
             <slot></slot>
           </h2>
         </div>
