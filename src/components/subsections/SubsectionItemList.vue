@@ -1,6 +1,6 @@
 <!-- SubsectionItemList.vue -->
 <template>
-  <div class="grid md:grid-cols-2 p-8 px-12 bg-[#151515]">
+  <div class="grid md:grid-cols-3 p-4 md:p-8 justify-items-center bg-[#151515]">
     <SubsectionBaseItem v-for="item in orderedItems" :key="item.id" :item="item" />
   </div>
 </template>

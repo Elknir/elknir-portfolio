@@ -57,7 +57,7 @@ export const softwares: SubsectionItems[] = [
   },
   {
     id: 'oculus',
-    name: 'VR Unity - Oculus',
+    name: 'Unity VR Oculus',
     image: '/softwares/Oculus.png',
     subtitle: '5 mois',
   },
