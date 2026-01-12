@@ -3,7 +3,9 @@ export const sectionsConfig = {
   webDev: { id: 'web-dev', name: 'Web Dev', color: 'yellow-300' },
   uiUx: { id: 'ui-ux', name: 'UI/UX Designer', color: 'red-300' },
   video: { id: 'video-editor', name: 'Video Editor', color: 'green-300' },
-  mystery: { id: 'mystery', name: '???', color: 'purple-300' },
+  /*
+    mystery: { id: 'mystery', name: '???', color: 'purple-300' },
+  */
   contacts: { id: 'contacts', name: 'Contacts', color: 'orange-300' },
 }
 

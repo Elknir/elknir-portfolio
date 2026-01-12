@@ -34,14 +34,14 @@
       <div class="absolute inset-0 bg-black/40"></div>
 
       <div
-        class="absolute inset-0 flex flex-col md:flex-row items-center justify-start md:items-end md:justify-start z-10"
+        class="absolute bottom-0 left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 md:inset-0 flex flex-col md:flex-row min-w-max md:items-end md:justify-start z-10"
       >
         <div class="relative">
           <!-- Image -->
-          <img src="/ELKNIR.png" alt="Avatar" class="h-[85vh] w-auto object-contain md:ml-12" />
+          <img src="/ELKNIR.png" alt="Avatar" class="h-[70vh] w-auto md:h-[85vh] md:ml-12" />
 
           <div
-            class="absolute bottom-[15%] left-[70%] text-white text-[30vh] leading-none whitespace-nowrap font-dfp z-20"
+            class="absolute top-0 md:top-auto -translate-y-[15vh] md:translate-y-0 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-[15%] md:left-[70%] text-white text-[10vh] md:text-[30vh] leading-none whitespace-nowrap font-dfp z-20"
             style="mix-blend-mode: difference"
           >
             ELKNIR
@@ -49,7 +49,7 @@
 
           <!-- Frame corners around head -->
           <div
-            class="absolute top-[3%] left-[52%] -translate-x-1/2 w-[35vh] h-[35vh] pointer-events-none"
+            class="absolute top-[3%] left-[50%] md:left-[52%] w-[30vh] h-[30vh] md:w-[35vh] md:h-[35vh] -translate-x-1/2 pointer-events-none"
           >
             <!-- Top left corner -->
             <div
@@ -85,7 +85,7 @@
     </section>
 
     <!--  Game Dev  -->
-    <div :id="sectionsConfig.gameDev.id" class="section-observer">
+    <div :id="sectionsConfig.gameDev.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
       <SectionTitle :id="sectionsConfig.gameDev.id" :bgColor="'bg-' + sectionsConfig.gameDev.color">
         01| {{ sectionsConfig.gameDev.name }}
       </SectionTitle>
@@ -125,7 +125,7 @@
     </div>
 
     <!--  Web Dev  -->
-    <div :id="sectionsConfig.webDev.id" class="section-observer">
+    <div :id="sectionsConfig.webDev.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
       <SectionTitle :id="sectionsConfig.webDev.id" :bgColor="'bg-' + sectionsConfig.webDev.color">
         02| {{ sectionsConfig.webDev.name }}
       </SectionTitle>
@@ -143,7 +143,7 @@
     </div>
 
     <!--  UI UX  -->
-    <div :id="sectionsConfig.uiUx.id" class="section-observer">
+    <div :id="sectionsConfig.uiUx.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
       <SectionTitle :id="sectionsConfig.uiUx.id" :bgColor="'bg-' + sectionsConfig.uiUx.color">
         03| {{ sectionsConfig.uiUx.name }}
       </SectionTitle>
@@ -158,7 +158,7 @@
     </div>
 
     <!--  Video Editor  -->
-    <div :id="sectionsConfig.video.id" class="section-observer">
+    <div :id="sectionsConfig.video.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
       <SectionTitle :id="sectionsConfig.video.id" :bgColor="'bg-' + sectionsConfig.video.color">
         04| {{ sectionsConfig.video.name }}
       </SectionTitle>
@@ -172,29 +172,29 @@
       -->
     </div>
     <!--  Mystery  -->
-    <div :id="sectionsConfig.mystery.id" class="section-observer">
-      <SectionTitle :id="sectionsConfig.mystery.id" :bgColor="'bg-' + sectionsConfig.mystery.color">
-        05| {{ sectionsConfig.mystery.name }}
-      </SectionTitle>
-      <div class="w-8/12 mx-auto">
-        <SubsectionComponent subsectionText="Softwares">
-          <SubsectionItemList :items="softwares" :item-ids="['unreal', 'cpp', 'git', 'gitlab']" />
-        </SubsectionComponent>
-      </div>
-      <!--      <ScrollingText :borderColor="'border-y-' + sectionsConfig.mystery.color" />-->
-    </div>
+    <!--    <div :id="sectionsConfig.mystery.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
+          <SectionTitle :id="sectionsConfig.mystery.id" :bgColor="'bg-' + sectionsConfig.mystery.color">
+            05| {{ sectionsConfig.mystery.name }}
+          </SectionTitle>
+          <div class="w-8/12 mx-auto">
+            <SubsectionComponent subsectionText="Softwares">
+              <SubsectionItemList :items="softwares" :item-ids="['unreal', 'cpp', 'git', 'gitlab']" />
+            </SubsectionComponent>
+          </div>
+          &lt;!&ndash;      <ScrollingText :borderColor="'border-y-' + sectionsConfig.mystery.color" />&ndash;&gt;
+        </div>-->
 
     <!-- Contacts  -->
-    <div :id="sectionsConfig.contacts.id" class="section-observer">
+    <div :id="sectionsConfig.contacts.id" class="section-observer scroll-mt-24 md:scroll-mt-32">
       <SectionTitle
         :id="sectionsConfig.contacts.id"
         :bgColor="'bg-' + sectionsConfig.contacts.color"
       >
-        06| {{ sectionsConfig.contacts.name }}
+        05| {{ sectionsConfig.contacts.name }}
       </SectionTitle>
       <div class="w-8/12 mx-auto">
-        <SubsectionComponent subsectionText="Contacts">
-          <SubsectionItemList :items="contacts" :item-ids="['mail']" />
+        <SubsectionComponent subsectionText="Formulaire de contact">
+          <FormComponent></FormComponent>
         </SubsectionComponent>
       </div>
     </div>
@@ -202,13 +202,14 @@
 </template>
 
 <script setup lang="ts">
-import { softwares, contacts } from '@/datas/subsectionDatas'
+import { softwares } from '@/datas/subsectionDatas'
 import SectionTitle from '@/components/SectionTitle.vue'
 import SubsectionComponent from '@/components/subsections/SubsectionComponent.vue'
 import SubsectionItemList from '@/components/subsections/SubsectionItemList.vue'
 import NavbarItem from '@/components/NavbarComponent.vue'
 import { sectionsConfig } from '@/datas/sectionsDatas.ts'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import FormComponent from '@/components/FormComponent.vue'
 
 const currentSectionId = ref('hero')
 
@@ -242,12 +243,9 @@ onMounted(() => {
     })
   }, options)
 
-  // On observe le Hero
   const heroEl = document.getElementById('hero')
   if (heroEl) observer.observe(heroEl)
 
-  // On observe toutes les sections définies dans sectionsConfig
-  // Note: J'ai ajouté la classe .section-observer aux divs enveloppantes dans le template pour cibler facilement
   const sections = document.querySelectorAll('.section-observer')
   sections.forEach((section) => {
     observer?.observe(section)

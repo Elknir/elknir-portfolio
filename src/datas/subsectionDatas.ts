@@ -104,6 +104,6 @@ export const contacts: SubsectionItems[] = [
     id: 'mail',
     name: 'Email',
     image: '/contacts/Mail.png',
-    subtitle: 'elknir.pro@gmail.com',
+    subtitle: '',
   },
 ]
