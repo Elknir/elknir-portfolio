@@ -1,10 +1,12 @@
 <template>
   <form ref="formRef" @submit.prevent="sendEmail" class="bg-[#151515] p-8">
     <div class="space-y-12">
-      <div class="border-b border-white/10 pb-12">
+      <div class="border-b border-white/10 pb-12 mt-10 md:mt-0">
         <div class="grid grid-cols-1 gap-x-6 gap-y-8">
           <div class="sm:col-span-4">
-            <label for="email" class="block text-sm/6 font-medium text-white">Votre Email</label>
+            <label for="email" class="block text-white"
+              >Votre Email ( lorem@ipsum.xxx ) <span class="text-red-500">*</span></label
+            >
             <div class="mt-2">
               <input
                 id="email"
@@ -18,7 +20,9 @@
           </div>
 
           <div class="sm:col-span-4">
-            <label for="subject" class="block text-sm/6 font-medium text-white">Objet</label>
+            <label for="subject" class="block text-white"
+              >Objet <span class="text-red-500">*</span></label
+            >
             <div class="mt-2">
               <input
                 id="subject"
@@ -31,7 +35,9 @@
           </div>
 
           <div class="sm:col-span-4">
-            <label for="message" class="block text-sm/6 font-medium text-white">Message</label>
+            <label for="message" class="block text-white"
+              >Message <span class="text-red-500">*</span></label
+            >
             <div class="mt-2">
               <textarea
                 id="message"

@@ -129,7 +129,14 @@
       <SectionTitle :id="sectionsConfig.webDev.id" :bgColor="'bg-' + sectionsConfig.webDev.color">
         02| {{ sectionsConfig.webDev.name }}
       </SectionTitle>
+
       <div class="w-8/12 mx-auto">
+        <SubsectionComponent subsectionText="Demo Reel">
+          <video controls class="w-full aspect-video" preload="metadata">
+            <source src="/src/assets/web_demoreel.mp4" type="video/mp4" />
+          </video>
+        </SubsectionComponent>
+
         <SubsectionComponent subsectionText="Softwares">
           <SubsectionItemList
             :items="softwares"
@@ -148,6 +155,10 @@
         03| {{ sectionsConfig.uiUx.name }}
       </SectionTitle>
       <div class="w-8/12 mx-auto">
+        <SubsectionComponent subsectionText="Workflow Design">
+          <img src="/src/assets/design_figma.png" alt="Workflow Design" class="w-full" />
+        </SubsectionComponent>
+
         <SubsectionComponent subsectionText="Softwares">
           <SubsectionItemList :items="softwares" :item-ids="['figma', 'photoshop', 'affinity']" />
         </SubsectionComponent>

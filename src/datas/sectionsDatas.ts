@@ -6,7 +6,7 @@ export const sectionsConfig = {
   /*
     mystery: { id: 'mystery', name: '???', color: 'purple-300' },
   */
-  contacts: { id: 'contacts', name: 'Contacts', color: 'orange-300' },
+  contacts: { id: 'contacts', name: 'Contact', color: 'orange-300' },
 }
 
 // Un tableau simple pour boucler dans la NavbarItem
