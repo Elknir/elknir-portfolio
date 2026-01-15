@@ -132,9 +132,14 @@
 
       <div class="w-8/12 mx-auto">
         <SubsectionComponent subsectionText="Demo Reel">
-          <video controls class="w-full aspect-video" preload="metadata">
-            <source src="/src/assets/web_demoreel.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            class="w-full aspect-video"
+            src="https://www.youtube.com/embed/bj3WaMmkzY4?si=jATpQ2VMLZFlmEgQ"
+            title="YouTube video player"
+            allow="accelerometer; encrypted-media; picture-in-picture;"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </SubsectionComponent>
 
         <SubsectionComponent subsectionText="Softwares">
