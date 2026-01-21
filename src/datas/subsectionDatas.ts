@@ -97,6 +97,42 @@ export const softwares: SubsectionItems[] = [
     image: '/softwares/Affinity.png',
     subtitle: '2 mois',
   },
+  {
+    id: 'react',
+    name: 'React',
+    image: '/softwares/React.png',
+    subtitle: '1 mois',
+  },
+  {
+    id: 'vue',
+    name: 'Vue',
+    image: '/softwares/Vue.png',
+    subtitle: '2 mois',
+  },
+  {
+    id: 'bootstrap',
+    name: 'Bootstrap',
+    image: '/softwares/Bootstrap.png',
+    subtitle: '1 mois',
+  },
+  {
+    id: 'css',
+    name: 'CSS',
+    image: '/softwares/CSS.png',
+    subtitle: '6 mois',
+  },
+  {
+    id: 'html',
+    name: 'HTML',
+    image: '/softwares/HTML.png',
+    subtitle: '6 mois',
+  },
+  {
+    id: 'tailwind',
+    name: 'Tailwind',
+    image: '/softwares/Tailwind.png',
+    subtitle: '1 mois',
+  },
 ]
 
 export const contacts: SubsectionItems[] = [

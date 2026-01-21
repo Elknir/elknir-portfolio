@@ -145,7 +145,18 @@
         <SubsectionComponent subsectionText="Softwares">
           <SubsectionItemList
             :items="softwares"
-            :item-ids="['javascript', 'typescript', 'git', 'gitlab']"
+            :item-ids="[
+              'html',
+              'css',
+              'javascript',
+              'typescript',
+              'react',
+              'vue',
+              'tailwind',
+              'bootstrap',
+              'git',
+              'gitlab',
+            ]"
           />
         </SubsectionComponent>
       </div>
