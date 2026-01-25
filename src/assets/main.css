@@ -16,12 +16,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Laira';
+  src: url('@/assets/fonts/Laira.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 @theme {
   --font-vcr: 'VCR OSD Mono', monospace;
   --font-sans: 'VCR OSD Mono', ui-sans-serif, system-ui, sans-serif;
 
-  --font-dfp: 'DFPT_ZY9', sans-serif;
+
+  --font-title: 'Laira'
 }
 
 @keyframes slide-right {

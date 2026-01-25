@@ -38,13 +38,22 @@
       >
         <div class="relative">
           <!-- Image -->
-          <img src="/ELKNIR.png" alt="Avatar" class="h-[70vh] w-auto md:h-[85vh] md:ml-12" />
+          <img :src="heroImage" alt="Avatar" class="h-[70vh] w-auto md:h-[85vh] md:ml-12" />
 
           <div
-            class="absolute top-0 md:top-auto -translate-y-[15vh] md:translate-y-0 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-[15%] md:left-[70%] text-white text-[10vh] md:text-[30vh] leading-none whitespace-nowrap font-dfp z-20"
+            class="scale-x-125 md:origin-left absolute top-0 md:top-auto -translate-y-[15vh] md:translate-y-0 left-1/2 -translate-x-1/2 md:translate-x-0 md:bottom-[5%] md:left-[70%] font-title z-20 flex flex-col items-center md:items-start leading-none"
             style="mix-blend-mode: difference"
           >
-            ELKNIR
+            <span class="text-white whitespace-nowrap tracking-wider" :class="titleSizeClass">
+              {{ heroName }}
+            </span>
+
+            <span
+              v-if="heroSurname"
+              class="text-white text-[6vh] md:text-[12vh] whitespace-nowrap md:mt-[-4vh]"
+            >
+              {{ heroSurname }}
+            </span>
           </div>
 
           <!-- Frame corners around head -->
@@ -75,7 +84,7 @@
             <!-- "&gt;" for > -->
             <!-- -mb-[0.8vh] to align perfectly -->
             <div
-              class="absolute bottom-0 left-full ml-[1vh] text-white text-[3vh] whitespace-nowrap leading-none -mb-[0.8vh]"
+              class="absolute bottom-0 left-full ml-[1vh] text-white text-[3vh] whitespace-nowrap leading-none -mb-[0.8vh] hidden md:block"
             >
               &gt; User id :
             </div>
@@ -254,7 +263,23 @@ const activeColorClass = computed(() => {
 
 let observer: IntersectionObserver | null = null
 
+const isPrivateMode = ref(false)
+const heroName = ref('ELKNIR')
+const heroSurname = ref('')
+const heroImage = ref('/ELKNIR.png')
+
+const titleSizeClass = computed(() => {
+  return isPrivateMode.value ? 'text-[10vh] md:text-[30vh]' : 'text-[10vh] md:text-[40vh]'
+})
+
 onMounted(() => {
+  if (window.location.pathname === '/maxime') {
+    isPrivateMode.value = true
+    heroName.value = 'MAXIME'
+    heroSurname.value = 'QUENNEHEN'
+    heroImage.value = '/Maxime.png'
+  }
+
   const options = {
     root: null,
     rootMargin: '-45% 0px -45% 0px',
